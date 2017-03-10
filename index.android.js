@@ -3,7 +3,9 @@ import { Text, AppRegistry } from 'react-native';
 
 //Formatação
 // fontSize, backgroundColor,  height , width
-//
+// padding, paddingTop, paddingLeft, paddingRight, paddingBottom
+// margin , marginHorizontal, marginVertical
+
 const Estilos = {
     estiloTexto : {
       fontSize : 30,
