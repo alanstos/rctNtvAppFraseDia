@@ -23,15 +23,15 @@ import { Text, AppRegistry, View , TouchableOpacity} from 'react-native';
 //flexDirection : 'row' ou 'column'
 //justifyContent : flex-start, center, flex-end, space-around, and space-between
 //alignItems: 'center' ,flex-start, center, flex-end, and stretch
+//alignSelf: 'center'
 const Estilos = {
     estiloTexto : {
       fontSize : 30,
       backgroundColor: '#3D57A1',
       color: '#fff',
-      padding : 30,
+      padding : 0,
       marginTop: 5,
-      marginHorizontal: 10,
-
+      marginHorizontal: 10
     }
 };
 
@@ -40,11 +40,11 @@ const App = () => {
 
     return (
 
-      <View style={{flex: 1, alignItems: 'center', justifyContent: 'space-around', flexDirection: 'column',backgroundColor: '#FFFFAA'}}>
+      <View style={{flex: 1, backgroundColor: '#FFFFAA'}}>
         
         
 			<TouchableOpacity disabled={false}>
-			  <Text>I am disabled</Text>
+			  <Text style={ Estilos.estiloTexto }>I am disabled</Text>
 			</TouchableOpacity>              
         
         
