@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, AppRegistry, View , TouchableOpacity} from 'react-native';
+import { Text, AppRegistry, View , TouchableOpacity,Image} from 'react-native';
 
 //Formatação
 // fontSize, backgroundColor,  height , width
@@ -32,6 +32,9 @@ const Estilos = {
       padding : 0,
       marginTop: 5,
       marginHorizontal: 10
+    },
+    estiloTextImage : {
+    	paddingBottom : 5
     }
 };
 
@@ -40,13 +43,19 @@ const App = () => {
 
     return (
 
-      <View style={{flex: 1, backgroundColor: '#FFFFAA'}}>
+      <View style={{flex: 1 }}>
         
         
-			<TouchableOpacity disabled={false}>
-			  <Text style={ Estilos.estiloTexto }>I am disabled</Text>
+			<TouchableOpacity >
+			  
+			  <Image source={require('./imgs/uvas.png')} >
+			  	<Text>Uvas aqui</Text>
+
+			  </Image>
+			  
 			</TouchableOpacity>              
-        
+
+
         
       </View>
 
