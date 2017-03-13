@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, AppRegistry, View , TouchableOpacity,Image} from 'react-native';
+import { Text, AppRegistry, View , TouchableOpacity,Image, Alert } from 'react-native';
 
 //Formatação
 // fontSize, backgroundColor,  height , width
@@ -24,39 +24,44 @@ import { Text, AppRegistry, View , TouchableOpacity,Image} from 'react-native';
 //justifyContent : flex-start, center, flex-end, space-around, and space-between
 //alignItems: 'center' ,flex-start, center, flex-end, and stretch
 //alignSelf: 'center'
+
 const Estilos = {
-    estiloTexto : {
-      fontSize : 30,
-      backgroundColor: '#3D57A1',
-      color: '#fff',
-      padding : 0,
-      marginTop: 5,
-      marginHorizontal: 10
-    },
-    estiloTextImage : {
-    	paddingBottom : 5
-    }
+	estiloView : {
+		flex: 1,
+		backgroundColor: '#FFF',
+		justifyContent: 'center',
+		alignItems: 'center'
+	},
+	estiloBotao : {
+		backgroundColor: '#548619',
+		paddingHorizontal: 20,
+		paddingVertical: 5,
+		marginTop : 15,
+		borderColor : '#afafaf',
+		borderWidth : 1
+	},
+	estiloTexto : {
+		color: '#FFF',
+		fontWeight : 'bold',
+		fontSize: 16
+	}
 };
+
+const _onPressButton = () => {
+	Alert.alert('press');
+}
 
 //Criar o componente
 const App = () => {
 
     return (
 
-      <View style={{flex: 1 }}>
-        
-        
-			<TouchableOpacity >
-			  
-			  <Image source={require('./imgs/uvas.png')} >
-			  	<Text>Uvas aqui</Text>
+      <View style={ Estilos.estiloView }>
+		<Image source={ require('./imgs/logo.png') } />
+	    <TouchableOpacity style={ Estilos.estiloBotao } onPress={ _onPressButton }>
+	      <Text style={ Estilos.estiloTexto }>Nova frase</Text>
+	    </TouchableOpacity>		
 
-			  </Image>
-			  
-			</TouchableOpacity>              
-
-
-        
       </View>
 
     );
