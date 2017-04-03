@@ -34,7 +34,7 @@ const Estilos = {
 	},
 	estiloBotao : {
 		backgroundColor: '#548619',
-		paddingHorizontal: 20,
+		paddingHorizontal: 30,
 		paddingVertical: 5,
 		marginTop : 15,
 		borderColor : '#afafaf',
@@ -48,7 +48,23 @@ const Estilos = {
 };
 
 const _onPressButton = () => {
-	Alert.alert('press');
+	var numAleatorio = Math.random();
+	numAleatorio = numAleatorio * 10;
+  	numAleatorio = Math.floor(numAleatorio);	
+
+  	var frases = [];
+  	frases[0] = 'Se tiver que amar, ame hoje. Se tiver que sorrir, sorria hoje. Se tiver que chorar, chore hoje. Pois o importante é viver hoje. O ontem já foi e o amanhã talvez não venha.';
+  	frases[1] = 'Se temos de esperar, que seja para colher a semente boa que lançamos hoje no solo da vida. Se for para semear, então que seja para produzir milhões de sorrisos, de solidariedade e amizade.';
+  	frases[2] = 'E quando tudo parece estar bem, uma decepção aparece e a tristeza te invade. A dor que hoje me machuca, é a que amanhã me ensina...';
+  	frases[3] = 'Só existem dois dias no ano que nada pode ser feito. Um se chama ontem e o outro se chama amanhã, portanto hoje é o dia certo para amar, acreditar, fazer e principalmente viver';
+  	frases[4] = 'Viva hoje! Arrisque hoje! Faça hoje! Não se deixe morrer lentamente! Não se esqueça de ser feliz... Feliz... Arriscar à Fazer, para Viver Feliz!';
+  	frases[5] = 'Eu vou ficar na minha, não vou me desgastar. Se tiver alguma batalha, só por hoje eu me retiro, preciso cuidar um pouco mais de mim';
+  	frases[6] = 'Não fique o dia todo pensando no que fazer, FAÇA! Porque se o mundo acabar hoje você tem que morrer orgulhoso de ter feito algo.';
+  	frases[7] = 'Ih. Sem frase';
+  	frases[8] = 'Ops. Sem frase';
+  	frases[9] = 'Opa. Tenta outra vez';
+
+	Alert.alert( frases[numAleatorio]);
 }
 
 //Criar o componente
